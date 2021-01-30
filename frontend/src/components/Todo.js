@@ -27,13 +27,23 @@ class Todo extends Component {
     .catch(err => console.log(err))
   }
 
+  deleteTodo = (id) => {
+    axios.delete(`${API_URL}/${id}`)
+    .then(res => {
+      if (res.data) {
+        this.getTodos()
+      }
+    })
+    .catch(err => console.log(err))
+  }
+
   render() {
     let { todos } = this.state;
 
     return(
       <div>
         <Input getTodos={this.getTodos}/>
-        <ListTodo todos={todos}/>
+        <ListTodo todos={todos} deleteTodo={this.deleteTodo}/>
       </div>
     )
   }
