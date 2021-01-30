@@ -27,3 +27,15 @@ Install the frontend dependencies:
 cd frontend
 npm install
 ```
+
+## Run the backend tests
+```
+cd backend
+npm run test
+```
+
+## Run the application
+```
+cd backend
+npm run dev
+```
