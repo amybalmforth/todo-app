@@ -6,3 +6,5 @@ mongoose.connect('mongodb://localhost/todo-app', {
 })
 mongoose.set('debug', true)
 mongoose.Promise = Promise;
+
+module.exports.Todo = require('./todo');
