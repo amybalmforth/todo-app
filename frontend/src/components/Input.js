@@ -10,8 +10,7 @@ class Input extends Component {
     this.state = {
       task: "",
       description: "",
-      date: "",
-      completed: ""
+      date: ""
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -34,8 +33,7 @@ class Input extends Component {
         this.setState({
           task: "",
           description: "",
-          date: "",
-          completed: ""
+          date: ""
         })
       }
     })

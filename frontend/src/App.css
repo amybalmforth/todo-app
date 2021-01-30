@@ -1,19 +1,5 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,15 +10,30 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#list {
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#delete {
+  color: red;
+  font-size: calc(1px + 2vmin);
+  cursor: pointer;
+}
+#complete {
+  color: green;
+  font-size: calc(1px + 2vmin);
+  cursor: pointer;
+}
+
+.headers {
+  color: gray;
+}
+
+.todoList {
+  font-size: calc(7px + 2vmin);
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
 }

@@ -27,6 +27,17 @@ class Todo extends Component {
     .catch(err => console.log(err))
   }
 
+  completeTodo = (id) => {
+    const payload = {completed: true}
+    axios.put(`${API_URL}/${id}`, payload)
+    .then(res => {
+      if (res.data) {
+        this.getTodos()
+      }
+    })
+    .catch(err => console.log(err))
+  }
+
   deleteTodo = (id) => {
     axios.delete(`${API_URL}/${id}`)
     .then(res => {
@@ -43,7 +54,7 @@ class Todo extends Component {
     return(
       <div>
         <Input getTodos={this.getTodos}/>
-        <ListTodo todos={todos} deleteTodo={this.deleteTodo}/>
+        <ListTodo todos={todos} deleteTodo={this.deleteTodo} completeTodo={this.completeTodo}/>
       </div>
     )
   }
