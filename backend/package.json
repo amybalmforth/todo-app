@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "export NODE_ENV=test && nodemon --exec 'mocha ./test/*'",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "dev": "npx concurrently \"npx nodemon index.js\" \"cd ../frontend && npm start\""
   },
   "author": "",
   "license": "ISC",

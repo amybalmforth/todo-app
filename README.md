@@ -1,7 +1,7 @@
 ## Requirements
-OS: MacOS or Linux
-Node.js
-Homebrew
+* OS: MacOS or Linux
+* Node.js
+* Homebrew
 
 ## Instructions for setting up
 
@@ -19,5 +19,11 @@ brew services start mongodb-community@4.4.3
 Install the backend dependencies:
 ```
 cd backend
+npm install
+```
+
+Install the frontend dependencies:
+```
+cd frontend
 npm install
 ```
