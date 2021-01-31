@@ -48,10 +48,10 @@ class TodoInput extends Component {
     return (
       <div>
         <form>
-          <input type="text" placeholder="enter a task name" onChange={(event)=>this.handleChange(event, "task")} value={this.state.task} /><br></br>
-          <input type="text" placeholder="enter a task description" onChange={(event)=>this.handleChange(event, "description")} value={this.state.description} /><br></br>
-          <input type="date" onChange={(event)=>this.handleChange(event, "date")} value={this.state.date} /><br></br>
-          <button onClick={this.addTodo}>add todo</button>
+          <input type="text" name="task" placeholder="enter a task name" onChange={(event)=>this.handleChange(event, "task")} value={this.state.task} /><br></br>
+          <input type="text" name="description" placeholder="enter a task description" onChange={(event)=>this.handleChange(event, "description")} value={this.state.description} /><br></br>
+          <input type="date" name="date" onChange={(event)=>this.handleChange(event, "date")} value={this.state.date} /><br></br>
+          <button name="add" onClick={this.addTodo}>add todo</button>
           <br></br>
         </form>
       </div>

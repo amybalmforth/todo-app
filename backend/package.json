@@ -6,7 +6,8 @@
   "scripts": {
     "test": "export NODE_ENV=test && nodemon --exec 'mocha ./test/*'",
     "start": "nodemon server.js",
-    "dev": "npx concurrently \"npx nodemon index.js\" \"cd ../frontend && npm start\""
+    "dev": "npx concurrently \"npx nodemon index.js\" \"cd ../frontend && npm start\"",
+    "start-test": "export NODE_ENV=test && npx concurrently \"npx nodemon index.js\" \"cd ../frontend && npm start\""
   },
   "author": "",
   "license": "ISC",

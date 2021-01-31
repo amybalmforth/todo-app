@@ -28,11 +28,24 @@ cd frontend
 npm install
 ```
 
-## Run the backend tests
+## Run the backend tests using test database
 ```
 cd backend
 npm run test
 ```
+
+## Run the frontend tests using test database
+Server needs to be running using the test database in order to run frontend tests. In one terminal:
+```
+cd backend
+npm run start-test
+```
+In a separate terminal:
+```
+cd frontend
+npm run cypress
+```
+Opens the Cypress GUI - click "run integration tests"
 
 ## Run the application
 ```

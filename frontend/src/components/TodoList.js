@@ -10,8 +10,8 @@ const TodoList = ({ todos, deleteTodo, completeTodo }) => {
             <span className={todo.completed ? 'completed' : ''}>{todo.task + ' ~ '}
             {todo.description + ' '}
             {todo.date ? ' ~ ' + todo.date.slice(0, -14) : todo.date} </span>
-            <button id="complete" onClick={() => completeTodo(todo._id)}>complete</button>
-            <button id="delete" onClick={() => deleteTodo(todo._id)}>delete</button>
+            <button name="complete" id="complete" onClick={() => completeTodo(todo._id)}>complete</button>
+            <button name="delete" id="delete" onClick={() => deleteTodo(todo._id)}>delete</button>
           </li>
         )
       })}
