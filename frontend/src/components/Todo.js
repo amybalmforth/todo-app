@@ -27,8 +27,12 @@ class Todo extends Component {
     .catch(err => console.log(err))
   }
 
+  // TO ADD: CHECK FOR TODO ALREADY WITH SAME TASK OR DESC
+
   completeTodo = (id) => {
-    const payload = {completed: true}
+    let payload = {completed: ''}
+    const completion = this.state.todos.find(todo => todo._id === id).completed
+    completion ? payload = {completed: false} : payload = {completed: true};
     axios.put(`${API_URL}/${id}`, payload)
     .then(res => {
       if (res.data) {
