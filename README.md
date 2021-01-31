@@ -1,9 +1,17 @@
+To-do list app with functionality to add a todo (task name and description required, date optional), complete a todo, uncomplete a todo, and delete a todo.
+
 ## Requirements
 * OS: MacOS or Linux
 * Node.js
 * Homebrew
 
 ## Instructions for setting up
+
+Clone the repository:
+```
+git clone git@github.com:amybalmforth/todo-app.git
+cd todo-app
+```
 
 Install MongoDB:
 ```
