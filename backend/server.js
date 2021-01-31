@@ -21,6 +21,15 @@ app.get('/todos', async (req, res, next) => {
   }
 })
 
+app.get('/todos/:id', async (req, res, next) => {
+  try {
+    const todo = await db.Todo.findById(req.params.id)
+    return success (res, todo)
+  } catch (err) {
+    next({ status: 400, message: 'failed to get todo' })
+  }
+})
+
 app.post('/todos', async (req, res, next) => {
   try {
     const todo = await db.Todo.create(req.body)

@@ -41,6 +41,19 @@ describe('get route', () => {
   })
 })
 
+describe('get by id route', () => {
+  it('should get todos', (done) => {
+    request('http://localhost:5000')
+    .get('/todos/60159d96366c3b1205484c2a')
+    .end((err, res) => {
+      expect(res.status).to.eq(200);
+      expect(res.body.task).to.eq('test task name');
+      expect(res.body.description).to.eq('test task description');
+      done();
+    })
+  })
+})
+
 describe('put route', () => {
   it('should complete a todo', (done) => {
     request('http://localhost:5000')
