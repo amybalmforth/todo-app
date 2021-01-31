@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(7px + 2vmin);
   color: white;
 }
 
@@ -15,22 +15,20 @@
 }
 
 #delete {
-  color: red;
-  font-size: calc(1px + 2vmin);
-  cursor: pointer;
+  background-color: red;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 #complete {
-  color: green;
-  font-size: calc(1px + 2vmin);
-  cursor: pointer;
-}
-
-.headers {
-  color: gray;
-}
-
-.todoList {
-  font-size: calc(7px + 2vmin);
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .completed {

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import Input from './Input';
-import ListTodo from './ListTodo';
+import TodoInput from './TodoInput';
+import TodoList from './TodoList';
 
 const API_URL = 'http://localhost:3000/todos/'
 
@@ -57,8 +57,8 @@ class Todo extends Component {
 
     return(
       <div>
-        <Input getTodos={this.getTodos}/>
-        <ListTodo todos={todos} deleteTodo={this.deleteTodo} completeTodo={this.completeTodo}/>
+        <TodoInput getTodos={this.getTodos}/>
+        <TodoList todos={todos} deleteTodo={this.deleteTodo} completeTodo={this.completeTodo}/>
       </div>
     )
   }

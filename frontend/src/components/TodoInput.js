@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const API_URL = 'http://localhost:3000/todos/'
 
-class Input extends Component {
+class TodoInput extends Component {
 
   constructor () {
     super();
@@ -48,10 +48,11 @@ class Input extends Component {
     return (
       <div>
         <form>
-          <input type="text" onChange={(event)=>this.handleChange(event, "task")} />
-          <input type="text" onChange={(event)=>this.handleChange(event, "description")} />
-          <input type="date" onChange={(event)=>this.handleChange(event, "date")} />
+          <input type="text" onChange={(event)=>this.handleChange(event, "task")} /><br></br>
+          <input type="text" onChange={(event)=>this.handleChange(event, "description")} /><br></br>
+          <input type="date" onChange={(event)=>this.handleChange(event, "date")} /><br></br>
           <button onClick={this.addTodo}>add todo</button>
+          <br></br>
         </form>
       </div>
     )
@@ -59,4 +60,4 @@ class Input extends Component {
 
 }
 
-export default Input
+export default TodoInput
