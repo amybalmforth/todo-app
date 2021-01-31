@@ -31,14 +31,14 @@ npm install
 ## Run the backend tests using test database
 ```
 cd backend
-npm run test
+npm run backend-test
 ```
 
 ## Run the frontend tests using test database
 Server needs to be running using the test database in order to run frontend tests. In one terminal:
 ```
 cd backend
-npm run start-test
+npm run backend-test
 ```
 In a separate terminal:
 ```
